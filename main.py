@@ -8,7 +8,7 @@ k = 8.99 * 10**9
 ax = plt.figure().add_subplot(projection="3d")
 
 x = np.linspace(-1, 1, 10)
-
+htsh=1
 print(x)
 
 u = 1
