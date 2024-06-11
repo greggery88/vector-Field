@@ -23,6 +23,9 @@ class Particle:
             r_mag = (r[0]**2 + r[1]**2 + r[2]**2) ** 1/2
             p_u, p_v, p_w = ((k * p.Q * self.Q * r) / r_mag**3)
             velo_to_p = np.array([p_u, p_v, p_w])
+            self.velocity + velo_to_p + self.velocity
+
+        self.pos += self.velocity
 
 
 
@@ -60,9 +63,9 @@ def main():
     while running:
         for particle in p_list:
             particle.update(p_list)
-            p_x = particle.position[0]
-            p_y = particle.position[1]
-            p_z = particle.position[2]
+            p_x = particle.pos[0]
+            p_y = particle.pos[1]
+            p_z = particle.pos[2]
             ax.scatter(p_x, p_y, p_z)
 
         u, v, w = vector_finder(p_list, x, y, z)
